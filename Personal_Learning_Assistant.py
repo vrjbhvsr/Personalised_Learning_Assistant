@@ -6,9 +6,14 @@ from langchain_core.prompts import ChatPromptTemplate, PromptTemplate, MessagesP
 import os
 
 load_dotenv()
-
+#print("OPENAI_API_KEY:", os.getenv("OPENAI_API_KEY"))
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 #os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+
+if not os.getenv("OPENAI_API_KEY"):
+    st.error("❌ Missing OPENAI_API_KEY in environment!")
+else:
+    st.success("✅ API Key loaded successfully!")
 
 chat_model = init_chat_model("openai:gpt-5-nano", 
                              temperature = 0.7,
