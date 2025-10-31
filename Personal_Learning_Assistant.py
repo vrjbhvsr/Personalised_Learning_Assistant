@@ -7,7 +7,7 @@ import os
 
 load_dotenv()
 
-#os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 #os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 chat_model = init_chat_model("openai:gpt-5-nano", 
