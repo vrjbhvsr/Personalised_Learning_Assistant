@@ -15,7 +15,7 @@ chat_model = init_chat_model("openai:gpt-5-nano",
                              max_retries = 2,
                              timeout= 60)
 
-st.set_page_config(page_title="Personalised Langchain Learning Assistant", page_icon="👨‍🏫", layout= "wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Personalised Learning Assistant", page_icon="👨‍🏫", layout= "wide", initial_sidebar_state="expanded")
 st.title("Personalised Langchain Learning Assistan👨‍🏫")
 
 human_message = st.chat_input("Ask me something....")
